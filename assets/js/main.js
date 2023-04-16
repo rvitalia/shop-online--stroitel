@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/assets/js/firstpage/search.js":
+/*!*******************************************!*\
+  !*** ./src/assets/js/firstpage/search.js ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"searchInput\": function() { return /* binding */ searchInput; }\n/* harmony export */ });\nfunction searchInput() {\r\n\r\n    let search = document.querySelector('#header__search');\r\n    let widgets = document.querySelector('#widgets');\r\n\r\n    search.addEventListener('click', () => {\r\n        widgets.classList.toggle('active__input');\r\n    });\r\n}\n\n//# sourceURL=webpack://rvitalia/./src/assets/js/firstpage/search.js?");
+
+/***/ }),
+
 /***/ "./src/assets/js/secondpage/main.js":
 /*!******************************************!*\
   !*** ./src/assets/js/secondpage/main.js ***!
   \******************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ \"./node_modules/@splidejs/splide/dist/js/splide.esm.js\");\n\r\n\r\nvar splide = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide('#main-carousel', {\r\n  // width: 694,\r\n  // height: 565,\r\n  pagination: false,\r\n  cover: true\r\n});\r\n\r\n\r\n\r\n// Collects LI elements:\r\nvar thumbnails = document.getElementsByClassName('thumbnail');\r\nvar current;\r\n\r\n\r\n\r\nfor (var i = 0; i < thumbnails.length; i++) {\r\n  initThumbnail(thumbnails[i], i);\r\n}\r\n\r\n// The function to initialize each thumbnail.\r\nfunction initThumbnail(thumbnail, index) {\r\n  thumbnail.addEventListener('click', function () {\r\n    splide.go(index);\r\n  });\r\n}\r\n\r\nsplide.on(\"mounted move\", function () {\r\n  var thumbnail = thumbnails[splide.index];\r\n\r\n  if (thumbnail) {\r\n    if (current) {\r\n      current.classList.remove(\"is-active\");\r\n    }\r\n\r\n    thumbnail.classList.add(\"is-active\");\r\n    current = thumbnail;\r\n  }\r\n});\r\n\r\nsplide.mount();\r\n\r\n\r\n\r\nlet search = document.querySelector('#header__search');\r\nlet widgets = document.querySelector('#widgets');\r\n\r\nsearch.addEventListener('click', () => {\r\n  widgets.classList.toggle('active__input');\r\n});\r\n\r\nlet favourites = document.querySelectorAll('#favourite');\r\n// console.log(favourites);\r\n\r\nfavourites.forEach(element => {\r\n  element.addEventListener('click', ()=>{\r\n    element.classList.toggle('red'); \r\n  })\r\n});\n\n//# sourceURL=webpack://rvitalia/./src/assets/js/secondpage/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ \"./node_modules/@splidejs/splide/dist/js/splide.esm.js\");\n/* harmony import */ var _firstpage_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../firstpage/search */ \"./src/assets/js/firstpage/search.js\");\n\r\n\r\n\r\nvar splide = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide('#main-carousel', {\r\n  // width: 694,\r\n  // height: 565,\r\n  pagination: false,\r\n  cover: true\r\n});\r\n\r\n\r\n\r\n// Collects LI elements:\r\nvar thumbnails = document.getElementsByClassName('thumbnail');\r\nvar current;\r\n\r\n\r\n\r\nfor (var i = 0; i < thumbnails.length; i++) {\r\n  initThumbnail(thumbnails[i], i);\r\n}\r\n\r\n// The function to initialize each thumbnail.\r\nfunction initThumbnail(thumbnail, index) {\r\n  thumbnail.addEventListener('click', function () {\r\n    splide.go(index);\r\n  });\r\n}\r\n\r\nsplide.on(\"mounted move\", function () {\r\n  var thumbnail = thumbnails[splide.index];\r\n\r\n  if (thumbnail) {\r\n    if (current) {\r\n      current.classList.remove(\"is-active\");\r\n    }\r\n\r\n    thumbnail.classList.add(\"is-active\");\r\n    current = thumbnail;\r\n  }\r\n});\r\n\r\nsplide.mount();\r\n\r\n\r\n\r\n(0,_firstpage_search__WEBPACK_IMPORTED_MODULE_1__.searchInput)();\r\n\r\nlet favourites = document.querySelectorAll('#favourite');\r\n// console.log(favourites);\r\n\r\nfavourites.forEach(element => {\r\n  element.addEventListener('click', ()=>{\r\n    element.classList.toggle('red'); \r\n  })\r\n});\n\n//# sourceURL=webpack://rvitalia/./src/assets/js/secondpage/main.js?");
 
 /***/ })
 
