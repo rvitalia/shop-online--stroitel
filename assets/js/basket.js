@@ -16,7 +16,17 @@
   \****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _firstpage_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../firstpage/search */ \"./src/assets/js/firstpage/search.js\");\n\r\n\r\n(0,_firstpage_search__WEBPACK_IMPORTED_MODULE_0__.searchInput)();\n\n//# sourceURL=webpack://rvitalia/./src/assets/js/basket/basket.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _firstpage_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../firstpage/burger */ \"./src/assets/js/firstpage/burger.js\");\n/* harmony import */ var _firstpage_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../firstpage/search */ \"./src/assets/js/firstpage/search.js\");\n\r\n\r\n\r\n(0,_firstpage_search__WEBPACK_IMPORTED_MODULE_1__.searchInput)();\r\n(0,_firstpage_burger__WEBPACK_IMPORTED_MODULE_0__.burger)();\n\n//# sourceURL=webpack://rvitalia/./src/assets/js/basket/basket.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/firstpage/burger.js":
+/*!*******************************************!*\
+  !*** ./src/assets/js/firstpage/burger.js ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"burger\": function() { return /* binding */ burger; }\n/* harmony export */ });\nfunction burger() {\r\n    let burger = document.querySelector('#burger');\r\n    let burgermenu = document.querySelector('#menu__burger');\r\n    let closeButton = document.querySelector('[data-close]');\r\n    let buttonsMenu = document.querySelectorAll('[data-select]');\r\n    let iconSearch = document.querySelector('[data-search=\"icon\"]');\r\n    let searchInput = document.querySelector('[data-search=\"input\"]');\r\n   // console.log(burger);\r\n    burger.addEventListener('click', () => {\r\n\r\n        burgermenu.classList.add('burger-active');\r\n        setTimeout(function () {\r\n            burgermenu.style.opacity = '1';\r\n            burgermenu.style.transform = 'translateX(0)';\r\n\r\n        }, 200)\r\n    })\r\n    closeButton.addEventListener('click', () => {\r\n        burgermenu.style.opacity = '0';\r\n        burgermenu.style.transform = 'translateX(-200%)';\r\n        setTimeout(function () {\r\n            burgermenu.classList.remove('burger-active');\r\n        }, 200)\r\n    })\r\n\r\n    buttonsMenu.forEach(element => {\r\n        element.addEventListener('click', () => {\r\n            burgermenu.style.opacity = '0';\r\n            burgermenu.style.transform = 'translateX(-200%)';\r\n            setTimeout(function () {\r\n                burgermenu.classList.remove('burger-active');\r\n            }, 200)\r\n        })\r\n    });\r\n\r\n    iconSearch.addEventListener('click', (event) => {\r\n        event.preventDefault();\r\n        searchInput.classList.toggle('search-active');\r\n    })\r\n\r\n\r\n}\n\n//# sourceURL=webpack://rvitalia/./src/assets/js/firstpage/burger.js?");
 
 /***/ }),
 
